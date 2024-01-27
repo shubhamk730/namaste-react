@@ -1,0 +1,2 @@
+what is cdn, crossorigin
+-> Root.render() replaces content not appends it.
