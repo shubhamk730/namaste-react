@@ -1,0 +1,28 @@
+-> Package.json is configuration for npm.
+-> Bundler : compresses, cleans all the files for the production, i.e, packages/ bundles the app so that it can be shipped to production.
+-> There are 2 types of dependencies:
+    1. Dev - it is required in development  
+    2. Nomral - used in production also
+-> npm keeps tracks of packages, in package-lock it mentions what exact version we are using
+-> Dependencies have their own dependencies, this is known as transitive dependencies.
+-> npx : executing a package
+
+=> Parcel:
+-> Dev build
+-> Local server
+-> HMR : Hot Module Replacement (changes reflected on saving)
+-> File watching algo in C++
+-> Caches things (Parcel Cache)
+-> Image optimization
+-> minnification and bundling files
+-> compresses files
+-> Differnetial bundling
+-> Consistent Hashing
+-> Diagnostic
+-> Error Handling
+-> Tree shaking - remove unused code for you
+-> Different dev and prod bundles (npx parcel index.html and npx parcel build index.html)
+-> (remove mainn from package json file otherwise parcel build gives error due to conflict)
+
+
+-> Set up browsersList in package.json

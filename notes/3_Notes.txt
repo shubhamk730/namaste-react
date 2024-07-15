@@ -1,0 +1,69 @@
+- Root.render() replaces the data, it does not append it.
+- npm run start = npm start
+- JSX is not html, and it is not part of react.
+- JSX is HTML like syntax not HTML.
+- JSX is at the end converted to React.createElement().
+- Single line jsx is fine for multiple lines wrap it in round brackets:-
+    const jsxHeading = ( <h1 id="testHeading">
+                            Namaste React using JSX
+                        </h1> )
+- Name of components always start with capital letter.
+- Component Composition : Composing 2 or more components together, eg :rendering one inside other
+- JSX prevents from scripting attacks automatically, by filtering it.
+- Config Driven UI : UI is driven by a config, example, data controls UI on swiggy website.
+
+- Why we need key in maps?
+    - to prevent complete re render, also never use index as keys
+
+- Component re renders on every state change
+
+- Reconciliation Algorithm (also known as react fibre)
+    - Came in React 16
+    - Virtual DOM is representation of actual DOM (in form of object, just console.log(<Component />)).
+
+- Diff Algorithm
+    - finds out differences between 2 virtual DOMs.
+
+- read Reconciliation : https://github.com/acdlite/react-fiber-architecture?tab=readme-ov-file
+
+- Microservices architecture
+    - Separation of concerns, single responsibility principle
+
+- Whenever state variables update, react triggers a reconciliation cycle (re-renders the component).
+
+- useEffect :-
+    - By definition, it is called after every render of component, when dependency array is not present
+        useEffect(() => {
+            console.log("Running after every render");
+        })
+    - [] : On empty dependency array is called only once on initial render and just once
+    - [dependency] : it renders whenever depenedency changes, and on initial render
+    - try props and other things as props
+
+- useState :-
+    - Never create state outside of component, it will always throw error.
+    - Creates local state variables in fn components.
+    - Declare states on the top in the component.
+    - Dont create state inside if else, loops and function.
+    - Only create them on functional components on the top.
+
+- useRouteError :-
+    - provided by react router DOM.
+    - Provides more information about error.
+    
+- Types of Routing in web app :-
+    - Client side rendering
+    - Server Side rendering
+    
+- Single Responsibility Principle
+    - Any function, class, identity should have a single responsibility
+
+- Dynamic bundling, Chunking, Lazy Loading, Code Splitting, On demand loading are all same.
+- Try to make Logical Separation of code, eg in MakeMyTrip - Bundles can be for flights, holiday packages, homestyles etc.
+
+- Ways to add CSS in react :-
+    - CSS global or local 
+    - Sass, Scss
+    - Styled components
+    - Tailwind
+    
