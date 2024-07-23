@@ -25,13 +25,13 @@ const RestaurantCard = (props) => {
   return (
     // adding inline css in react
     // <div className="res-card" style={styleCard}>
-    <div className="res-card" onClick={clickHandler}>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200" onClick={clickHandler}>
       <img
-        className="res-logo"
+        className="rounded-lg"
         alt="res_logo"
         src={CDN_URL + cloudinaryImageId}
       />
-      <h3>{name || "Meghana Foods"}</h3>
+      <h3 className="font-bold py-4 text-lg">{name || "Meghana Foods"}</h3>
       <h4>{cuisines.join(", ") || "Fast food, chinese"}</h4>
       <h4>{avgRating || "4.4"} *</h4>
       <h4>{costForTwo || "$40 for two"}</h4>
@@ -39,5 +39,21 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
+
+// Higher Order Component
+// input - restaurantCard
+// output - reestaurantCard with promoted label
+
+export const withPromotedLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
+        <RestaurantCard {...props} />
+      </div>
+    )
+  }
+}
+
 
 export default RestaurantCard;
