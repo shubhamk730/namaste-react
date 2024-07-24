@@ -67,3 +67,42 @@
     - Styled components
     - Tailwind
     
+- PostCSS : tool to transform CSS with JS
+
+- Higher Order Component : Does not change functionality of core component, but adds some additional property/ behaviour
+
+- Context solves problem for props drilling.
+
+- Two ways to use the context values (Supposing the Context name to be UserContext):-
+    1. useContext(UserContext)
+    2.  <UserContext.Provider>
+            (data) => <h1>{data.name} is the current loggedin user.</h1>
+        </UserContext.Provider>
+
+- If you do not wish to use default value, you can provide value manually in the provider for the components:-
+    <UserContext.Provider value={{loggedInUser: userInfo, setUserInfo}}>
+      <div className="app">
+          <Header />
+          <Outlet />
+      </div>
+    </UserContext.Provider>
+
+# Redux Toolkit steps:-
+    - Install @reduxjs/toolkit and react-reduxjs
+    - Build our store
+    - Connect our store to App
+    - Build Cart Slice
+    - Dispatch an Action
+    - Read data using Selector
+
+- When using selector make sure to subscribe to right portion of the store, otherwise it can be performance issue.
+
+- Earlier in old Redux stated Do Not Mutate the State, returning new state was mandatory.
+- Now redux action, wemphasises that we have to mutate the state or return the new state.
+- Changes will be not be reflected if we just change the reference. We need to modify the actual state.
+
+- If redux state is not readable (proxy object), you can use console.log(current(state)). current function comes from reduxtoolkit.
+
+- Read immer, redux docs.
+
+- Earlier used middleware and thunks in redux, but now replaced by RTK query.
