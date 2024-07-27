@@ -25,7 +25,7 @@ const RestaurantCard = (props) => {
   return (
     // adding inline css in react
     // <div className="res-card" style={styleCard}>
-    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200" onClick={clickHandler}>
+    <div data-testid = "restaurantCard" className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200" onClick={clickHandler}>
       <img
         className="rounded-lg"
         alt="res_logo"
