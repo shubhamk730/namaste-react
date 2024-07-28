@@ -129,3 +129,5 @@
 
 - Testing Higher Order Components (HOC)
 - Tests can not make API calls or network calls. They only run in test environment.
+
+- Class Based components
