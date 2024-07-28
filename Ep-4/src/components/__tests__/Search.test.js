@@ -16,7 +16,7 @@ global.fetch = jest.fn(() => {
 
 it("Should render body component with search button and Search for KFC", async () => {
 
-    // fails as fetch is part of browser and jest ddoesnot understand fetch, we need mock function for fetch
+    // fails as fetch is part of browser and jest does not understand fetch, we need mock function for fetch
     //  When testing, code that causes React state updates should be wrapped into act(...):
     await act(async () => render(<BrowserRouter><Body /></BrowserRouter>));
 
