@@ -131,3 +131,17 @@
 - Tests can not make API calls or network calls. They only run in test environment.
 
 - Class Based components
+
+- Why use super(props), constructor(props), and why we cant use async fn as callback in useEffect?
+- this.setState({}) will only update the values of the variables passed, not the other variables.
+
+- Lifecycle Methods:-
+- First constructor is called after class is instantiated, then render is called.
+
+- https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/, refer to the diagram
+
+- When initial render finishes and data is loaded with initial data, then :-
+    - API call we made updates this.setState()
+    - render method is called again with updated data
+    - ComponentDidUpdate is called (not ComponentDidMount).
+    - ComponentWillUnmount() runs before components is unmounted.
